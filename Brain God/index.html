@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Enter the title.</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            height: 100%;
+            background-color: #EEE;
+            color: #222;
+            font-family: "Kokoro", "Rounded Mplus 1c", "Open Sans", 'Noto Sans Japanese', "Yu Gothic", "Meiryo UI", sans-serif;
+            font-weight: 300;
+            font-size: 3em;
+        }
+
+        body>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        body>*>* {
+            position: relative;
+        }
+
+        .wrap {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #screen {
+            border: 1px solid #222;
+        }
+
+        #gameover-wrap {
+            font-size: 2em;
+            color: #EEE;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .shown {
+            animation-duration: 2s;
+            animation-name: show;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes show {
+            from {
+                opacity: 0;
+                background-color: rgba(0, 0, 0, .0);
+            }
+            to {
+                opacity: 1;
+                background-color: rgba(0, 0, 0, .7);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <canvas id="screen"></canvas>
+        <span id="info"></span>
+    </div>
+    <div id="gameover-wrap" class="wrap hidden">
+        <span id="gameover">wwwww</span>
+         <a href="../選択画面/index選択.html" style="font-size:0.7em;color:#EEE">めにゅーに戻る。</a>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+        @import url('https://fonts.googleapis.com/earlyaccess/kokoro.css');
+        @import url('https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css');
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+    </style>
+</body>
+
+</html>

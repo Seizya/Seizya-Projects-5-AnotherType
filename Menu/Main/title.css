@@ -1,0 +1,170 @@
+#main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-image: url('./img/bg/night.png');
+}
+
+#title-bg {
+    position: absolute;
+    top: 25vh;
+    left: 0;
+    height: 50vh;
+    width: 100vw;
+
+    background-image: url(./img/bg/thema-light.jpeg);
+    border-top: 5px solid rgba(16, 87, 121, 1);
+    border-bottom: 5px solid rgba(16, 87, 121, 1);
+
+    box-shadow: 0 0 10px rgba(16, 87, 121, 1);
+}
+
+#title-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-image: url(./img/logo/ver5.png);
+    background-size: contain;
+}
+
+#circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-size: contain;
+
+    animation-name: sct;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#circle_1 {
+    background-image: url(./img/circle/sw12-3.png);
+    opacity: .3;
+    animation-duration: 16s;
+}
+
+#circle_2 {
+    background-image: url(./img/circle/smg10.png);
+    opacity: .5;
+    animation-direction: reverse;
+}
+
+#circle_3 {
+    background-image: url(./img/circle/smg11.png);
+}
+
+@keyframes sct {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    90% {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#circle_line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50vw;
+
+    border-right: 2px solid white;
+    box-shadow: 2px 0 2px white, -2px 0 2px white inset;
+}
+
+#serch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    border-right: 3px solid white;
+    box-shadow: 2vw 0 8vw white;
+
+    animation-name: serch;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes serch {
+    to {
+        left: calc(-100vw - 10vw);
+    }
+}
+
+#menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5vh;
+    width: 100vw;
+
+    line-height: calc(5vh - 4px);
+    font-size: 4.5vh;
+    font-weight: 350;
+    text-align: center;
+    color: black;
+
+    background-color: rgba(230, 230, 230, 1);
+    border-top: 2px white solid;
+    border-bottom: 2px white solid;
+    box-shadow: 0 0 10px white;
+
+    transition-duration:100ms;
+}
+
+#menu:hover {
+    color: white;
+    text-shadow: 0 0 5px white;
+
+    background-color: rgba(16, 87, 121, .8);
+}

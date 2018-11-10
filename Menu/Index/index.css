@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family:
+		/*"うずらフォント",/*"Segoe Script",*/
+		"Open Sans", "Rounded Mplus 1c", "Kokoro", 'Noto Sans Japanese', "Yu Gothic", "Meiryo UI", sans-serif;
+	font-weight: 300;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}

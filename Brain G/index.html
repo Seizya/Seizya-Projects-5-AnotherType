@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="common.js"></script>
+    <script src="logger.js"></script>
+    <script src="character.js"></script>
+    <script src="main.js"></script>
+    <script src="main function.js"></script>
+    <script src="menu.js"></script>
+    <script src="hit.js"></script>
+    <style>
+        #log {
+            color: #333;
+            background-color: #EEE;
+            /*white-space: pre-wrap;*/
+            opacity: 0.8;
+            padding-left: 0.5em;
+            max-height: 100%;
+            max-width: 30%;
+            font-size: 0.9em;
+            font-family: monospace;
+            margin: 0;
+            position: fixed;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+    </style>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+
+        body {
+            color: #222;
+            font-family: "Kokoro", "Rounded Mplus 1c", "Open Sans", 'Noto Sans Japanese', "Yu Gothic", "Meiryo UI", sans-serif;
+            font-weight: 300;
+            height: 100vh;
+            overflow-y: hidden;
+            margin: 0;
+        }
+
+        body>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        body>*>* {
+            position: relative;
+        }
+
+        /*
+        #info,
+        #info_2 {
+            font-size: 1.5em;
+        }
+*/
+
+        .hide {
+            display: none !important;
+        }
+
+        #gameover-wrap {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-size: 4em;
+            color: #EEE;
+        }
+
+        #Clear-wrap {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            font-size: 4em;
+            color: rgba(39, 38, 114, 1);
+        }
+
+        .shown {
+            animation-duration: 2s;
+            animation-name: show;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes show {
+            from {
+                opacity: 0;
+                background-color: rgba(0, 0, 0, .0);
+            }
+            to {
+                opacity: 1;
+                background-color: rgba(0, 0, 0, .7);
+            }
+        }
+
+        .shown2 {
+            animation-duration: 2s;
+            animation-name: show2;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes show2 {
+            from {
+                opacity: 0;
+                background-color: rgba(0, 0, 0, .0);
+            }
+            to {
+                opacity: 1;
+                background-color: rgba(259, 239, 150, 0.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas id="screen" ,height="100%" ,width="100%"></canvas>
+        <!-- <p id="info"></p>
+        <p id="info_2"></p>-->
+    </div>
+    <pre id="log" class="scrollX scrollY"></pre>
+    <div class="hide" id="gameover-wrap">
+        <span id="gameover-text">Score : +score</span>
+        <a href="../選択画面/index選択.html" style="font-size:0.7em;color:#EEE">めにゅーに戻る。</a>
+    </div>
+    <div class="hide" id="Clear-wrap">
+        <span id="Clear-text">Score : +score</span>
+        <a href="../選択画面/index選択.html" style="font-size:0.7em;color:rgba(39,38,114,1)">めにゅーに戻る。</a>
+        <a href="../Brain Good/index.html" style="font-size:0.7em;color:rgba(39,38,114,1)">NEXTレベルに挑戦する。</a>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/earlyaccess/notosansjapanese.css');
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700');
+        @import url('https://fonts.googleapis.com/earlyaccess/kokoro.css');
+        @import url('https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css');
+        @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+    </style>
+</body>
+
+</html>
